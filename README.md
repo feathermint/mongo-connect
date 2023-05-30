@@ -1,4 +1,4 @@
-# @feathermint/mongodb
+# @feathermint/mongo-connect
 
 Utility function to establish and verify a connection to MongoDB.
 
@@ -7,13 +7,13 @@ Utility function to establish and verify a connection to MongoDB.
 Install the package with:
 
 ```
-npm install @feathermint/mongodb
+npm install @feathermint/mongo-connect
 ```
 
 ## Usage
 
 ```
-import * as mongodb from "@feathermint/mongodb";
+import * as mongodb from "@feathermint/mongo-connect";
 
 async function client(url, options) {
     return await mongodb.connect(url, options);
