@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@feathermint/logger": "^1.0.0",
-    "mongodb": "^5.4.0"
+    "mongodb": "^6.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
