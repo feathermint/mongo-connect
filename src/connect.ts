@@ -10,7 +10,7 @@ export async function connect(
     w: "majority",
     retryWrites: true,
     serverApi: ServerApiVersion.v1,
-  }
+  },
 ): Promise<MongoClient> {
   let safeURL = url;
   if (url.indexOf("@") != -1) {
@@ -22,20 +22,16 @@ export async function connect(
   const client = new MongoClient(url, options);
   try {
     await client.connect();
-  } catch (err) {
-    throw new Error("mongodb: failed to connect", {
-      cause: err as Error,
-    });
+  } catch (cause) {
+    throw new Error("mongodb: failed to connect", { cause });
   }
 
   try {
     await client.db("admin").command({ ping: 1 });
-  } catch (err) {
-    throw new Error("mongodb: failed to verify connection", {
-      cause: err as Error,
-    });
+  } catch (cause) {
+    throw new Error("mongodb: failed to verify connection", { cause });
   }
-
   log.info("Connection established and verified.");
+
   return client;
 }
