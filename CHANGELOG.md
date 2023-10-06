@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/feathermint/mongo-connect/compare/v1.0.1...v1.0.2) (2023-10-06)
+
+
+### Bug Fixes
+
+* remove type assertions ([84805f0](https://github.com/feathermint/mongo-connect/commit/84805f020461bc3f5391211198d737969184dab1))
+
 ## [1.0.1](https://github.com/feathermint/mongo-connect/compare/v1.0.0...v1.0.1) (2023-05-30)
 
 
